@@ -1,0 +1,36 @@
+def cong(a, b):
+    return a + b
+
+def tru(a, b):
+    return a - b
+
+def nhan(a, b):
+    return a * b
+
+def chia(a, b):
+    if b == 0:
+        return "Không thể chia cho 0"
+    return a / b
+
+if __name__ == "__main__":
+    print("Chương trình tính toán đơn giản")
+    print("1. Cộng")
+    print("2. Trừ")
+    print("3. Nhân")
+    print("4. Chia")
+
+    choice = input("Nhập lựa chọn của bạn (1/2/3/4): ")
+
+    num1 = float(input("Nhập số thứ nhất: "))
+    num2 = float(input("Nhập số thứ hai: "))
+
+    if choice == '1':
+        print("Tổng:", cong(num1, num2))
+    elif choice == '2':
+        print("Hiệu:", tru(num1, num2))
+    elif choice == '3':
+        print("Tích:", nhan(num1, num2))
+    elif choice == '4':
+        print("Thương:", chia(num1, num2))
+    else:
+        print("Lựa chọn không hợp lệ")
